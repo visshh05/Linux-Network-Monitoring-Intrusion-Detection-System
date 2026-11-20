@@ -15,7 +15,6 @@
 
 **A lightweight, Python-based network IDS that captures live traffic on Linux, detects port-scan activity in real time, and visualizes alerts on a Flask dashboard.**
 
-[Overview](#-overview) • [Features](#-key-features) • [Architecture](#-system-architecture) • [Install](#-installation) • [Usage](#-usage) • [Roadmap](#-future-improvements)
 
 </div>
 

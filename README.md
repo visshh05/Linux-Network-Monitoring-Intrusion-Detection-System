@@ -21,27 +21,6 @@
 
 ---
 
-## 📑 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [System Architecture](#-system-architecture)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Folder Structure](#-folder-structure)
-- [Detection Logic](#-detection-logic)
-- [Challenges & Solutions](#-challenges--solutions)
-- [Skills Demonstrated](#-skills-demonstrated)
-- [Screenshots](#-screenshots--demo)
-- [Impact Highlights](#-impact-highlights)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Author](#-author)
-
----
-
 ## 🔎 Overview
 
 This project is a **network monitoring and intrusion detection system (IDS)** built for Linux. It sniffs live packets with **Scapy**, normalizes TCP/UDP/ICMP traffic, stores everything in **SQLite**, and runs a **sliding-window port-scan detector** that raises `HIGH` severity alerts. Results are shown on a **Flask** web dashboard with live traffic statistics, a threat feed, and a recent-packet table.

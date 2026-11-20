@@ -235,7 +235,7 @@ Both thresholds are constructor arguments of `PortScanDetector`, so they can be 
 
 | Dashboard Overview | Alert Feed | Live Capture Terminal |
 |---|---|---|
-| ![Dashboard](docs/dashboard.png) | ![Alerts](docs/alerts.png) | ![Terminal](docs/capture.png) |
+| ![Dashboard](docs/dashboard.png) | ![Alerts](docs/alerts.png) |
 
 **Demo GIF:** record the dashboard while running `python demo.py`, save as `docs/demo.gif`, then uncomment the line below.
 
@@ -296,9 +296,11 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 **Vishvajit Madavan**
 Cybersecurity student | Aspiring SOC & Web Security Analyst
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/<your-handle>)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<your-username>)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:<your-email>)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](
+https://www.linkedin.com/in/vishavajit-madavan-a3abb832a)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](
+https://github.com/visshh05)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vishavajitmadavan15@gmail.com)
 
 ⭐ If you found this project useful, consider giving it a star.
 

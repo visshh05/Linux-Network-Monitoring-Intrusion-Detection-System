@@ -97,8 +97,8 @@ collect telemetry  ->  analyze  ->  detect  ->  alert  ->  investigate
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/visshh05/Linux-Network-Monitoring-Intrusion-Detection-System.git
+cd Linux-Network-Monitoring-Intrusion-Detection-System
 
 # Install system dependencies
 sudo apt update && sudo apt install -y python3-venv

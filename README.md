@@ -232,8 +232,8 @@ Both thresholds are constructor arguments of `PortScanDetector`, so they can be 
 
 > Add your screenshots to the `docs/` folder and update the paths below.
 
-| Dashboard Overview | Alert Feed | Live Capture Terminal |
-|---|---|---|
+| Dashboard Overview | Alert Feed |
+|---|---|
 | ![Dashboard](docs/dashboard.png) | ![Alerts](docs/alerts.png) |
 
 **Demo GIF:** record the dashboard while running `python demo.py`, save as `docs/demo.gif`, then uncomment the line below.

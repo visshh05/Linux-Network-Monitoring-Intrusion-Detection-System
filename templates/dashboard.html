@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="10">
+  <title>Linux Security Monitor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">LIVE NETWORK TELEMETRY</p>
+        <h1>Linux Security Monitor</h1>
+        <p class="subhead">Packet capture, protocol visibility, and focused intrusion detection.</p>
+      </div>
+      <div class="status"><span class="pulse"></span>MONITORING</div>
+    </header>
+
+    <section class="stats" aria-label="Network summary">
+      <article class="stat stat-main"><span>Total packets</span><strong>{{ summary.total_packets }}</strong></article>
+      <article class="stat"><span>TCP</span><strong>{{ summary.TCP }}</strong></article>
+      <article class="stat"><span>UDP</span><strong>{{ summary.UDP }}</strong></article>
+      <article class="stat"><span>ICMP</span><strong>{{ summary.ICMP }}</strong></article>
+      <article class="stat stat-alert"><span>Security alerts</span><strong>{{ summary.security_alerts }}</strong></article>
+    </section>
+
+    <section class="content-grid">
+      <div class="panel alerts-panel">
+        <div class="panel-heading"><div><p class="eyebrow">THREAT FEED</p><h2>Recent security alerts</h2></div><span class="count">{{ alerts|length }}</span></div>
+        {% if alerts %}
+          <div class="alert-list">
+            {% for alert in alerts %}
+            <article class="alert-item">
+              <div class="alert-mark">!</div>
+              <div class="alert-copy"><h3>{{ alert.alert_type }}</h3><p>{{ alert.description }}</p><small>{{ alert.source_ip }} &rarr; {{ alert.destination_ip }} &middot; {{ alert.timestamp }}</small></div>
+              <span class="severity">{{ alert.severity }}</span>
+            </article>
+            {% endfor %}
+          </div>
+        {% else %}<p class="empty">No suspicious activity recorded.</p>{% endif %}
+      </div>
+
+      <div class="panel packets-panel">
+        <div class="panel-heading"><div><p class="eyebrow">CAPTURE STREAM</p><h2>Recent network packets</h2></div></div>
+        {% if packets %}
+        <div class="table-wrap"><table><thead><tr><th>Source</th><th>Destination</th><th>Protocol</th><th>Ports</th><th>Size</th></tr></thead><tbody>
+          {% for packet in packets %}<tr><td>{{ packet.source_ip }}</td><td>{{ packet.destination_ip }}</td><td><span class="protocol protocol-{{ packet.protocol|lower }}">{{ packet.protocol }}</span></td><td>{% if packet.destination_port %}{{ packet.source_port }} &rarr; {{ packet.destination_port }}{% else %}&mdash;{% endif %}</td><td>{{ packet.packet_size }} B</td></tr>{% endfor %}
+        </tbody></table></div>
+        {% else %}<p class="empty">Waiting for captured packets.</p>{% endif %}
+      </div>
+    </section>
+    <footer>SQLite persistence &middot; Scapy capture engine &middot; Refreshes every 10 seconds</footer>
+  </main>
+</body>
+</html>
